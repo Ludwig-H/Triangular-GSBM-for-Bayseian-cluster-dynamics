@@ -16,3 +16,39 @@ Thumbs.db
 
 # Gemini CLI
 .gemini/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.env/
+.venv/
+env/
+venv/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# R
+.Rhistory
+.RData
+.Ruserdata
+
+# Data and Results
+data/
+models/
+results/
+outputs/
+
+# IDEs
+.vscode/
+.idea/
+
+# LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.synctex.gz
