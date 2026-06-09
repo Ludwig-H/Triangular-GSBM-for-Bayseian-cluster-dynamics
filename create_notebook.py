@@ -187,7 +187,7 @@ notebook = {
     "    W = xp.where(same_comm == correct_obs, up, -up)\n",
     "    \n",
     "    for mode in modes:\n",
-    "        sigma = xp.random.randint(0, 2, size=L*L) * 2 - 1\n",
+    "        sigma = Sigma.copy()\n",
     "        \n",
     "        # Précalculs statiques hors de la boucle temporelle (évite les allocations GPU répétées !)\n",
     "        if mode == 'edges':\n",
