@@ -152,8 +152,8 @@ def SW_step(sigma, W, edges, mode, up, triangles, type_A, au, freeze_prob):
     if use_gpu:
         labels = xp.arange(N_nodes, dtype=xp.int32)
         dummy = xp.arange(N_nodes, dtype=xp.int32)
-        u = edges[:, 0]
-        v = edges[:, 1]
+        u = edges[:, 0].astype(xp.int32)
+        v = edges[:, 1].astype(xp.int32)
         
         # 10 iterations is sufficient for grid graphs up to L=1000
         for _ in range(10):
