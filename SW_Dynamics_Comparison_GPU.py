@@ -240,8 +240,8 @@ if __name__ == '__main__':
         ax1.plot(mean_ov_gpu[mode], label=labels[mode], color=colors[mode])
         ax1.fill_between(range(T), mean_ov_gpu[mode] - std_ov_gpu[mode], mean_ov_gpu[mode] + std_ov_gpu[mode], color=colors[mode], alpha=0.2)
         
-        ax2.plot(mean_lcc_gpu[mode], label=labels[mode], color=colors[mode])
-        ax2.fill_between(range(T), mean_lcc_gpu[mode] - std_lcc_gpu[mode], mean_lcc_gpu[mode] + std_lcc_gpu[mode], color=colors[mode], alpha=0.2)
+        ax2.plot(mean_lcc_gpu[mode][:50], label=labels[mode], color=colors[mode])
+        ax2.fill_between(range(50), mean_lcc_gpu[mode][:50] - std_lcc_gpu[mode][:50], mean_lcc_gpu[mode][:50] + std_lcc_gpu[mode][:50], color=colors[mode], alpha=0.2)
 
     ax1.set_title('Overlap (Recouvrement) vs Itérations')
     ax1.set_xlabel('Itération')
